@@ -1,3 +1,16 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <?php if ( $site_name ): ?>
+        <a class="brand" href="#"><?php print $site_name; ?></a>
+      <?php endif; ?>
+      <?php if ( $nav_links ): ?>
+        <?php print $nav_links; ?>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <?php if ( $breadcrumb ): ?>
     <?php print $breadcrumb; ?>

@@ -14,3 +14,13 @@ require dirname(__FILE__) . '/includes/pager.inc';
 require dirname(__FILE__) . '/includes/tab.inc';
 require dirname(__FILE__) . '/includes/table.inc';
 require dirname(__FILE__) . '/includes/theme.inc';
+
+/**
+ * Override or insert variables into page.tpl.php
+ */
+function bootstrap_preprocess_page(&$vars) {
+  $vars['nav_links'] = theme('links', array(
+    'links' => $vars['main_menu'],
+    'attributes' => array('class' => array('nav')),
+  ));
+}
