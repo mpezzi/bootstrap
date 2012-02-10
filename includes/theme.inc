@@ -11,7 +11,7 @@
  */
 function bootstrap_breadcrumb(&$variables) {
   $breadcrumb = $variables['breadcrumb'];
-  $divider = '/';
+  $divider = theme_get_setting('bootstrap_breadcrumb_divider');
 
   if ( !empty($breadcrumb) ) {
    // Provide a navigational heading to give context for breadcrumb links to
@@ -28,7 +28,12 @@ function bootstrap_breadcrumb(&$variables) {
    }
    $output .= '</ul>';
 
-   return $output;
+   if ( theme_get_setting('bootstrap_breadcrumb') == 'yes' ) {
+     return $output;
+   }
+   else {
+     return '';
+   }
   }
 }
 

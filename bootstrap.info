@@ -23,3 +23,5 @@ regions[bottom] = Page bottom
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
+settings[bootstrap_breadcrumb] = yes
+settings[bootstrap_breadcrumb_divider] = '/'
