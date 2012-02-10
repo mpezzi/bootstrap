@@ -32,4 +32,5 @@ function bootstrap_preprocess_page(&$vars) {
     'links' => $vars['secondary_menu'],
     'attributes' => array('class' => array('nav pull-right')),
   ));
+
 }

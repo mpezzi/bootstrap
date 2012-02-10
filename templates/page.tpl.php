@@ -9,7 +9,9 @@
         </a>
       <?php endif; ?>
       <?php if ( $site_name ): ?>
-        <a class="brand" href="#"><?php print $site_name; ?></a>
+        <a class="brand" href="<?php print $front_page; ?>">
+          <?php print $site_name; ?>
+        </a>
       <?php endif; ?>
       <?php if ( $nav_links ): ?>
         <div class="nav-collapse">
