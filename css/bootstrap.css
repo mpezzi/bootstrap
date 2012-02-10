@@ -1,0 +1,13 @@
+/* Tabs
+------------------------------- */
+div.tabs {
+  margin-bottom: 18px;
+}
+
+div.tabs ul.nav-tabs {
+  margin-bottom: 9px;
+}
+
+div.tabs ul.nav-pills {
+  margin-bottom: 0;
+}
