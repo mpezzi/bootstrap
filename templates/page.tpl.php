@@ -16,6 +16,9 @@
           <?php print $nav_links; ?>
         </div>
       <?php endif; ?>
+      <?php if ( $nav_links_dropdown ): ?>
+        <?php print $nav_links_dropdown; ?>
+      <?php endif; ?>
     </div>
   </div>
 </div>

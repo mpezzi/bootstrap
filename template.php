@@ -23,4 +23,13 @@ function bootstrap_preprocess_page(&$vars) {
     'links' => $vars['main_menu'],
     'attributes' => array('class' => array('nav')),
   ));
+
+  foreach ( $vars['secondary_menu'] as $item => $secondary_link ) {
+    $vars['secondary_menu'][$item]['class'][] = 'dropdown';
+  }
+
+  $vars['nav_links_dropdown'] = theme('links', array(
+    'links' => $vars['secondary_menu'],
+    'attributes' => array('class' => array('nav pull-right')),
+  ));
 }
