@@ -59,6 +59,21 @@ select,
   margin-top: 0;
 }
 
+/* Fix Horizontal Forms on Password Confirm Field
+------------------------------- */
+.form-horizontal .form-type-password-confirm > div.controls {
+  margin-left: 0;
+}
+
+.form-horizontal .form-type-password-confirm > div.controls > p.help-block {
+  margin-left: 160px;
+}
+
+.form-horizontal .form-type-password-confirm div.password-parent {
+  clear: none;
+}
+
+
 /* Filters
 ------------------------------- */
 .tips {
