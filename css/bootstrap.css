@@ -12,6 +12,73 @@ div.tabs ul.nav-pills {
   margin-bottom: 0;
 }
 
+/* Alerts
+------------------------------- */
+.alert ul {
+  margin-bottom: 0;
+}
+
+
+/* Inline Links
+------------------------------- */
+ul.inline,
+ul.links.inline {
+  display: inline;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+
+/* Forms
+------------------------------- */
+.form-required {
+  color: #B94A48;
+}
+
+legend a {
+  color: #333333;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  margin-bottom: 0;
+}
+
+.password-strength {
+  margin-top: 0;
+}
+
+
+/* Nodes
+------------------------------- */
+.node {
+  margin-bottom: 18px;
+}
+
+/* Fields
+------------------------------- */
+.field {
+  margin-bottom: 9px;
+}
+
+/* Profiles
+------------------------------- */
+.profile {
+  margin: 0 0 1em 0;
+}
+
+.profile h3 {
+  border-bottom: none;
+}
+
+
 /* Footer
 ------------------------------- */
 footer {
