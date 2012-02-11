@@ -152,3 +152,11 @@ function bootstrap_table(&$variables) {
   $output .= "</table>\n";
   return $output;
 }
+
+/**
+ * Override or insert variables into views-view-table.tpl.php
+ */
+function bootstrap_preprocess_views_view_table(&$vars) {
+  $vars['classes_array'][] = 'table';
+  $vars['classes_array'][] = 'table-striped';
+}
