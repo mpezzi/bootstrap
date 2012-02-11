@@ -35,13 +35,13 @@
     <?php print $breadcrumb; ?>
   <?php endif; ?>
 
-  <?php print $messages; ?>
-
   <?php if ( $title ): ?>
     <div class="page-header">
       <h1><?php print $title; ?></h1>
     </div>
   <?php endif; ?>
+
+  <?php print $messages; ?>
 
   <?php if ( $tabs ): ?>
     <div class="tabs"><?php print render($tabs); ?></div>
