@@ -10,7 +10,7 @@ stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
 stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/bootstrap-responsive.css
 
-scripts[] = bootstrap/js/bootstrap.min.js
+scripts[] = bootstrap/js/bootstrap.js
 scripts[] = js/bootstrap.js
 
 regions[help] = Help

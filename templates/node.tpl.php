@@ -1,5 +1,6 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
-  <?php print $user_picture; ?>
+  <!-- @TODO: fix user pictures -->
+  <!--<?php print $user_picture; ?>-->
 
   <?php if ( !$page ): ?>
     <h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>

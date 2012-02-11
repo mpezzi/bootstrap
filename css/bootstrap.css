@@ -1,3 +1,13 @@
+/* Nav Bar
+------------------------------- */
+body.toolbar .navbar-fixed-top {
+  top: 30px;
+}
+
+body.toolbar-drawer .navbar-fixed-top {
+  top: 65px;
+}
+
 /* Tabs
 ------------------------------- */
 div.tabs {
@@ -17,7 +27,6 @@ div.tabs ul.nav-pills {
 .alert ul {
   margin-bottom: 0;
 }
-
 
 /* Inline Links
 ------------------------------- */
@@ -131,7 +140,6 @@ table .control-group {
   box-sizing: content-box;
 }
 
-
 /* Nodes
 ------------------------------- */
 .node {
@@ -179,7 +187,6 @@ table .control-group {
 .profile h3 {
   border-bottom: none;
 }
-
 
 /* Footer
 ------------------------------- */
