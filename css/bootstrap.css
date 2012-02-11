@@ -75,6 +75,13 @@ select,
   margin-bottom: 18px;
 }
 
+/* Comments
+------------------------------- */
+.comment {
+  margin-bottom: 18px;
+}
+
+
 /* Fields
 ------------------------------- */
 .field {
