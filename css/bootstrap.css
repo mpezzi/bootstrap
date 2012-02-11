@@ -112,6 +112,20 @@ select,
   padding: 0;
 }
 
+/* Vertical Tabs
+------------------------------- */
+.vertical-tabs fieldset.vertical-tabs-pane {
+  padding: 1em;
+}
+
+.vertical-tabs .form-type-textfield input {
+  width: 95%;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+
 /* Nodes
 ------------------------------- */
 .node {
