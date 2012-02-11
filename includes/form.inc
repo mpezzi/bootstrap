@@ -145,3 +145,48 @@ function bootstrap_form_element_label(&$variables) {
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
 }
+
+/**
+ * Returns HTML for a set of filter tips.
+ */
+function bootstrap_filter_tips($variables) {
+  $tips = $variables['tips'];
+  $long = $variables['long'];
+  $output = '';
+
+  $multiple = count($tips) > 1;
+  if ($multiple) {
+    $output = '<h2>' . t('Text Formats') . '</h2>';
+  }
+
+  if (count($tips)) {
+    $output .= '<div class="well">';
+    if ($multiple) {
+      $output .= '<div class="compose-tips">';
+    }
+    foreach ($tips as $name => $tiplist) {
+      if ($multiple) {
+        $output .= '<div class="filter-type filter-' . drupal_html_class($name) . '">';
+        $output .= '<h3>' . $name . '</h3>';
+      }
+
+      if (count($tiplist) > 0) {
+        $output .= '<ul class="tips">';
+        foreach ($tiplist as $tip) {
+          $output .= '<li' . ($long ? ' id="filter-' . str_replace("/", "-", $tip['id']) . '">' : '>') . $tip['tip'] . '</li>';
+        }
+        $output .= '</ul>';
+      }
+
+      if ($multiple) {
+        $output .= '</div>';
+      }
+    }
+    if ($multiple) {
+      $output .= '</div>';
+    }
+    $output .= '</div>';
+  }
+
+  return $output;
+}

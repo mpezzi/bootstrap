@@ -59,6 +59,15 @@ select,
   margin-top: 0;
 }
 
+/* Filters
+------------------------------- */
+.tips {
+  font-size: 1em;
+}
+
+.filter-guidelines {
+  padding: 0;
+}
 
 /* Nodes
 ------------------------------- */
