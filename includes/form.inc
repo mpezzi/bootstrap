@@ -21,6 +21,16 @@ function bootstrap_button(&$vars) {
   }
 
   // Use appropriate bootstrap button types.
+  switch ( $element['#id'] ) {
+    case 'edit-submit':
+      $element['#attributes']['class'][] = 'btn-primary';
+      break;
+    case 'edit-delete':
+      $element['#attributes']['class'][] = 'btn-danger';
+      break;
+  }
+
+  /* Use appropriate bootstrap button types.
   switch ( $element['#value'] ) {
     case 'Save':
       $element['#attributes']['class'][] = 'primary';
@@ -33,7 +43,7 @@ function bootstrap_button(&$vars) {
       $element['#attributes']['class'][] = 'danger';
       $element['#value'] = '<i class="icon white remove"></i> ' . $element['#value'];
       break;
-  }
+  } */
 
   return '<button' . drupal_attributes($element['#attributes']) . '>' . $element['#value'] . '</button>';
 }
