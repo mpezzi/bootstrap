@@ -16,7 +16,8 @@
         <?php print t('Unpublished') ?>
       </span>
     <?php endif; ?>
-    <small><?php print $submitted; ?> <?php print $permalink; ?></small>
+    <small class="submitted"><?php print $submitted; ?></small>
+    <small class="permalink"><?php print $permalink; ?></small>
   </p>
 
   <div class="content"<?php print $content_attributes ?>>

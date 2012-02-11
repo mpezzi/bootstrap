@@ -80,10 +80,14 @@ select,
 .comment {
   position: relative;
   margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
+.comment .permalink,
+.comment .submitted,
 .comment .submitted .label {
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
 .comment .user-picture {
