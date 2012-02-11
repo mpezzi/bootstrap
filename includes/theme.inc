@@ -7,6 +7,15 @@
 
 
 /**
+ * Implements hook_css_alter().
+ */
+function bootstrap_css_alter(&$css) {
+  unset($css['modules/system/system.menus.css']);
+  unset($css['modules/system/system.messages.css']);
+  unset($css['modules/system/system.theme.css']);
+}
+
+/**
  * Returns HTML for a breadcrumb trail.
  */
 function bootstrap_breadcrumb(&$variables) {
