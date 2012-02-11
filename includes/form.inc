@@ -39,6 +39,30 @@ function bootstrap_button(&$vars) {
 }
 
 /**
+ * Returns HTML for a form.
+ */
+function bootstrap_form(&$variables) {
+  $element = $variables['element'];
+  if (isset($element['#action'])) {
+    $element['#attributes']['action'] = drupal_strip_dangerous_protocols($element['#action']);
+  }
+  element_set_attributes($element, array('method', 'id'));
+  if (empty($element['#attributes']['accept-charset'])) {
+    $element['#attributes']['accept-charset'] = "UTF-8";
+  }
+
+  //$element['#horizontal'] = TRUE;
+
+  // Look for #horizontal property on form element.
+  if ( isset($element['#horizontal']) && $element['#horizontal'] ) {
+    $element['#attributes']['class'][] = 'form-horizontal';
+  }
+
+  // Anonymous DIV to satisfy XHTML compliance.
+  return '<form' . drupal_attributes($element['#attributes']) . '><div>' . $element['#children'] . '</div></form>';
+}
+
+/**
  * Returns HTML for a form element.
  */
 function bootstrap_form_element(&$variables) {
