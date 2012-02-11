@@ -118,7 +118,7 @@ function bootstrap_form_element(&$variables) {
 
     case 'after':
       $output .= '<div class="controls">';
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
+      $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       break;
 
@@ -161,6 +161,7 @@ function bootstrap_form_element_label(&$variables) {
   // Style the label as class option to display inline with the element.
   if ($element['#title_display'] == 'after') {
     $attributes['class'][] = 'option';
+    $attributes['class'][] = $element['#type'];
   }
   // Show label only to screen readers to avoid disruption in visual flows.
   elseif ($element['#title_display'] == 'invisible') {
@@ -170,11 +171,21 @@ function bootstrap_form_element_label(&$variables) {
   if (!empty($element['#id'])) {
     $attributes['for'] = $element['#id'];
   }
-  
+
+  // @Bootstrap: Add Bootstrap control-label class.
   $attributes['class'][] = 'control-label';
 
+  // @Bootstrap: Insert radio and checkboxes inside label elements.
+  $output = '';
+  if ( isset($variables['#children']) ) {
+    $output .= $variables['#children'];
+  }
+
+  // @Bootstrap: Append label
+  $output .= $t('!title !required', array('!title' => $title, '!required' => $required));
+
   // The leading whitespace helps visually separate fields from inline labels.
-  return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+  return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
 }
 
 /**

@@ -59,6 +59,35 @@ select,
   margin-top: 0;
 }
 
+/* Forms (Vertical)
+------------------------------- */
+.form-type-radios .control-group,
+.form-type-checkboxes .control-group {
+  margin-bottom: 5px;
+}
+
+.form-type-radios .form-type-radio:first-child,
+.form-type-checkboxes .form-type-checkbox:first-child {
+  padding-top: 5px;
+}
+
+.form-type-radios .form-type-radio label.radio,
+.form-type-checkboxes .form-type-checkbox label.checkbox {
+  padding-top: 0;
+}
+
+/* Forms (Horizontal)
+------------------------------- */
+.form-horizontal .form-radios .controls,
+.form-horizontal .form-checkboxes .controls {
+  margin-left: 0;
+}
+
+.form-horizontal .form-type-radios .control-group,
+.form-horizontal .form-type-checkboxes .control-group {
+  margin-bottom: 0;
+}
+
 /* Fix Horizontal Forms on Password Confirm Field
 ------------------------------- */
 .form-horizontal .form-type-password-confirm > div.controls {
@@ -72,7 +101,6 @@ select,
 .form-horizontal .form-type-password-confirm div.password-parent {
   clear: none;
 }
-
 
 /* Filters
 ------------------------------- */
