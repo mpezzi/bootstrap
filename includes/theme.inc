@@ -63,8 +63,8 @@ function bootstrap_status_messages(&$vars) {
   foreach ( drupal_get_messages($vars['display']) as $type => $messages ) {
     $type = isset($bootstrap_types[$type]) ? $bootstrap_types[$type] : $type;
 
-    $output .= "<div class=\"alert alert-$type\">\n";
-    $output .= "<a class=\"close\" href=\"#\">x</a>\n";
+    $output .= "<div class=\"alert alert-$type fade in\" data-dismiss=\"alert\">\n";
+    $output .= "<a class=\"close\" href=\"#\">&times;</a>\n";
 
     if ( count($messages) > 1 ) {
       $output .= "<ul>\n";
