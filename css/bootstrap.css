@@ -102,6 +102,12 @@ select,
   clear: none;
 }
 
+/* Forms in Tables
+------------------------------- */
+table .control-group {
+  margin-bottom: 0;
+}
+
 /* Filters
 ------------------------------- */
 .tips {
