@@ -14,13 +14,15 @@ function bootstrap_button(&$vars) {
   $element['#attributes']['type'] = 'submit';
   element_set_attributes($element, array('id', 'name', 'value'));
 
+  // @Bootstrap: Add button classes.
   $element['#attributes']['class'][] = 'btn'; // Add bootstrap class.
+
   $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
   if ( !empty($element['#attributes']['disabled']) ) {
     $element['#attributes']['class'][] = 'form-button-disabled';
   }
 
-  // Use appropriate bootstrap button types.
+  // @Bootstrap: Use appropriate bootstrap button types.
   switch ( $element['#id'] ) {
     case 'edit-submit':
       $element['#attributes']['class'][] = 'btn-primary';
@@ -29,21 +31,6 @@ function bootstrap_button(&$vars) {
       $element['#attributes']['class'][] = 'btn-danger';
       break;
   }
-
-  /* Use appropriate bootstrap button types.
-  switch ( $element['#value'] ) {
-    case 'Save':
-      $element['#attributes']['class'][] = 'primary';
-      $element['#value'] = '<i class="icon white ok"></i> ' . $element['#value'];
-      break;
-    case 'Preview':
-      $element['#value'] = '<i class="icon file"></i> ' . $element['#value'];
-      break;
-    case 'Delete':
-      $element['#attributes']['class'][] = 'danger';
-      $element['#value'] = '<i class="icon white remove"></i> ' . $element['#value'];
-      break;
-  } */
 
   return '<button' . drupal_attributes($element['#attributes']) . '>' . $element['#value'] . '</button>';
 }
@@ -61,8 +48,8 @@ function bootstrap_form(&$variables) {
     $element['#attributes']['accept-charset'] = "UTF-8";
   }
 
+  // @Bootstrap: Switch forms to horizontal layout.
   //$element['#horizontal'] = TRUE;
-
   // Look for #horizontal property on form element.
   if ( isset($element['#horizontal']) && $element['#horizontal'] ) {
     $element['#attributes']['class'][] = 'form-horizontal';
