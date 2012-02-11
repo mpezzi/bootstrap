@@ -56,8 +56,15 @@ function bootstrap_form_element(&$variables) {
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
+
   // Add element's #type and #name as class to aid with JS/CSS selectors.
   $attributes['class'] = array('control-group');
+
+  // Add an error class to the form wrapper.
+  if ( form_get_error($element) ) {
+    $attributes['class'][] = 'error';
+  }
+
   if (!empty($element['#type'])) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
