@@ -1,17 +1,13 @@
-name = Bootstrap
-description = Twitter Bootstrap base theme. For more information visit <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.
+name = Bootstrap Starter Kit
+description = Bootstrap Starter Kit
 screenshot = screenshot.png
 
 core = 7.x
-engine = phptemplate
+base theme = bootstrap
 
-stylesheets[all][] = bootstrap/css/bootstrap.min.css
-stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
-stylesheets[all][] = css/bootstrap.css
-stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/theme.css
 
-scripts[] = bootstrap/js/bootstrap.min.js
-scripts[] = js/bootstrap.js
+scripts[] = js/script.js
 
 regions[help] = Help
 regions[sidebar_first] = First sidebar
