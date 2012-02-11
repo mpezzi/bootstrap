@@ -2,27 +2,20 @@
   <?php print $picture; ?>
 
   <?php if ( $title ): ?>
-    <h3>
-      <?php print $title; ?>
-      <?php if ( $new ): ?>
-        <span class="label label-important">
-          <?php print $new; ?>
-        </span>
-      <?php endif; ?>
-    </h3>
-  <?php elseif ( $new ): ?>
-    <span class="label label-important">
-      <?php print $new; ?>
-    </span>
-  <?php endif; ?>
-
-  <?php if ( $status == 'comment-unpublished' ): ?>
-    <span class="label label-info">
-      <?php print t('Unpublished') ?>
-    </span>
+    <h3><?php print $title; ?></h3>
   <?php endif; ?>
 
   <p class="submitted">
+    <?php if ( $new ): ?>
+      <span class="label label-important">
+        <?php print $new; ?>
+      </span>
+    <?php endif; ?>
+    <?php if ( $status == 'comment-unpublished' ): ?>
+      <span class="label label-info">
+        <?php print t('Unpublished') ?>
+      </span>
+    <?php endif; ?>
     <small><?php print $submitted; ?> <?php print $permalink; ?></small>
   </p>
 

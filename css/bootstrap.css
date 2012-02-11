@@ -78,9 +78,24 @@ select,
 /* Comments
 ------------------------------- */
 .comment {
+  position: relative;
   margin-bottom: 18px;
 }
 
+.comment .submitted .label {
+  margin-right: 5px;
+}
+
+.comment .user-picture {
+  float: left;
+  margin-right: 9px;
+}
+
+.comment .user-picture img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
 
 /* Fields
 ------------------------------- */
