@@ -13,14 +13,19 @@
           <?php print $site_name; ?>
         </a>
       <?php endif; ?>
-      <?php if ( $nav_links ): ?>
-        <div class="nav-collapse">
+      <div class="nav-collapse">
+        <?php if ( $nav_links ): ?>
           <?php print $nav_links; ?>
-        </div>
-      <?php endif; ?>
-      <?php if ( $nav_links_dropdown ): ?>
-        <?php print $nav_links_dropdown; ?>
-      <?php endif; ?>
+        <?php endif; ?>
+        <?php if ( $logged_in && $user_links ): ?>
+          <ul class="nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="drowdown-toggle" data-toggle="dropdown"><?php print check_plain($user->name); ?></a>
+              <?php print $user_links; ?>
+            </li>
+          </ul>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>
