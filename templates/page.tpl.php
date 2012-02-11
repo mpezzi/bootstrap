@@ -35,6 +35,10 @@
     <?php print $breadcrumb; ?>
   <?php endif; ?>
 
+  <?php if ( $tabs ): ?>
+    <div class="tabs"><?php print render($tabs); ?></div>
+  <?php endif; ?>
+
   <?php if ( $title ): ?>
     <div class="page-header">
       <h1><?php print $title; ?></h1>
@@ -42,10 +46,6 @@
   <?php endif; ?>
 
   <?php print $messages; ?>
-
-  <?php if ( $tabs ): ?>
-    <div class="tabs"><?php print render($tabs); ?></div>
-  <?php endif; ?>
 
   <div class="row">
     <?php if ( $page['sidebar_first'] ): ?>
