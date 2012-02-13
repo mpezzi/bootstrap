@@ -97,6 +97,11 @@ select,
   margin-bottom: 0;
 }
 
+.form-horizontal .form-type-radio label.radio,
+.form-horizontal .form-type-checkbox label.checkbox {
+  float: none;
+}
+
 /* Fix Horizontal Forms on Password Confirm Field
 ------------------------------- */
 .form-horizontal .form-type-password-confirm > div.controls {
