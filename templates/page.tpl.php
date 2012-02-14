@@ -48,6 +48,7 @@
   <?php print $messages; ?>
 
   <div class="row">
+    <?php // @TODO: sidebar / content span calculation? ?>
     <?php if ( $page['sidebar_first'] ): ?>
       <?php print render($page['sidebar_first']); ?>
     <?php endif; ?>
