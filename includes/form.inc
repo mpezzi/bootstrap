@@ -115,6 +115,7 @@ function bootstrap_form_element(&$variables) {
 
     case 'after':
       $output .= '<div class="controls">';
+      // @Bootstrap: Bootstrap markup requires the input element to be inside the label element.
       $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       break;
@@ -158,6 +159,7 @@ function bootstrap_form_element_label(&$variables) {
   // Style the label as class option to display inline with the element.
   if ($element['#title_display'] == 'after') {
     $attributes['class'][] = 'option';
+    // @Bootstrap: Add type class.
     $attributes['class'][] = $element['#type'];
   }
   // Show label only to screen readers to avoid disruption in visual flows.
@@ -199,6 +201,7 @@ function bootstrap_filter_tips($variables) {
   }
 
   if (count($tips)) {
+    // @Bootstrap: Use "well" style for input filter information.
     $output .= '<div class="well">';
     if ($multiple) {
       $output .= '<div class="compose-tips">';
