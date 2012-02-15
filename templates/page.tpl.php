@@ -32,11 +32,19 @@
 
 <div class="container">
 
-  <?php if ( $subnav_links ): ?>
-    <div class="subnav">
-      <?php print $subnav_links; ?>
-    </div>
-  <?php endif; ?>
+  <header class="jumbotron">
+    <?php if ( $site_name ): ?>
+      <h1><?php print $site_name; ?></h1>
+    <?php endif; ?>
+    <?php if ( $site_slogan ): ?>
+      <p class="lead"><?php print $site_slogan; ?></p>
+    <?php endif; ?>
+    <?php if ( $subnav_links ): ?>
+      <div class="subnav">
+        <?php print $subnav_links; ?>
+      </div>
+    <?php endif; ?>
+  </header>
 
   <?php if ( $breadcrumb ): ?>
     <?php print $breadcrumb; ?>
