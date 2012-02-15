@@ -24,6 +24,11 @@ function bootstrap_preprocess_page(&$vars) {
     'attributes' => array('class' => array('nav')),
   ));
 
+  $vars['subnav_links'] = theme('links', array(
+    'links' => $vars['main_menu'],
+    'attributes' => array('class' => array('nav', 'nav-pills')),
+  ));
+
   // @TODO: Re-theme for use of parent / child menu items.
   $vars['user_links'] = theme('links', array(
     'links' => $vars['secondary_menu'],

@@ -31,6 +31,13 @@
 </div>
 
 <div class="container">
+
+  <?php if ( $subnav_links ): ?>
+    <div class="subnav">
+      <?php print $subnav_links; ?>
+    </div>
+  <?php endif; ?>
+
   <?php if ( $breadcrumb ): ?>
     <?php print $breadcrumb; ?>
   <?php endif; ?>
