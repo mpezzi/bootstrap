@@ -122,6 +122,10 @@ table .control-group {
   margin-bottom: 0;
 }
 
+td.checkbox input[type="checkbox"] {
+  margin-left: 0;
+}
+
 /* Filters
 ------------------------------- */
 .tips {
