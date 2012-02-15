@@ -34,7 +34,7 @@
 
   <header class="jumbotron">
     <?php if ( $site_name ): ?>
-      <h1><?php print $site_name; ?></h1>
+      <h1><a href="<?php print $front_page; ?>"><?php print $site_name; ?></a></h1>
     <?php endif; ?>
     <?php if ( $site_slogan ): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
