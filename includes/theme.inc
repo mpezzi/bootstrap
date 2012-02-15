@@ -52,7 +52,7 @@ function bootstrap_breadcrumb(&$variables) {
 function bootstrap_status_messages(&$vars) {
   $output = '';
 
-  // Convert Drupal's message types to Bootstrap types.
+  // @Bootstrap: Convert Drupal's message types to Bootstrap types.
   $bootstrap_types = array(
     'status' => 'success',
     'error' => 'error',
@@ -63,8 +63,12 @@ function bootstrap_status_messages(&$vars) {
   foreach ( drupal_get_messages($vars['display']) as $type => $messages ) {
     $type = isset($bootstrap_types[$type]) ? $bootstrap_types[$type] : $type;
 
-    $output .= "<div class=\"alert alert-$type fade in\" data-dismiss=\"alert\">\n";
-    $output .= "<a class=\"close\" href=\"#\">&times;</a>\n";
+    // @TODO: Look into issue when clicking on alert links and it disappearing.
+    //$output .= "<div class=\"alert alert-$type fade in\" data-dismiss=\"alert\">\n";
+    //$output .= "<a class=\"close\" href=\"#\">&times;</a>\n";
+
+    // @TODO: For now we'll use simple alert messages.
+    $output .= "<div class=\"alert alert-$type\">\n";
 
     if ( count($messages) > 1 ) {
       $output .= "<ul>\n";
