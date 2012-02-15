@@ -23,13 +23,11 @@ function bootstrap_button(&$vars) {
   }
 
   // @Bootstrap: Use appropriate bootstrap button types.
-  switch ( $element['#id'] ) {
-    case 'edit-submit':
-      $element['#attributes']['class'][] = 'btn-primary';
-      break;
-    case 'edit-delete':
-      $element['#attributes']['class'][] = 'btn-danger';
-      break;
+  if ( strpos($element['#id'], 'submit') !== FALSE ) {
+    $element['#attributes']['class'][] = 'btn-primary';
+  }
+  elseif ( strpos($element['#id'], 'delete') !== FALSE ) {
+    $element['#attributes']['class'][] = 'btn-danger';
   }
 
   return '<button' . drupal_attributes($element['#attributes']) . '>' . $element['#value'] . '</button>';
