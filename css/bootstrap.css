@@ -86,6 +86,10 @@ body.toolbar-drawer .navbar-fixed-top {
   line-height: 1;
 }
 
+.jumbotron h1 a {
+  text-decoration: none;
+}
+
 .jumbotron p {
   margin-bottom: 18px;
   font-weight: 300;
@@ -99,6 +103,17 @@ body.toolbar-drawer .navbar-fixed-top {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+}
+
+.jumbotron .user-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.jumbotron .user-links .dropdown-menu {
+  left: auto;
+  right: 0;
 }
 
 /* Tabs

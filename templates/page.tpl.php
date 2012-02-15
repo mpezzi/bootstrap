@@ -44,6 +44,15 @@
         <?php print $subnav_links; ?>
       </div>
     <?php endif; ?>
+    <?php if ( $logged_in && $user_links ): ?>
+      <div class="btn-group user-links">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+          <?php print check_plain($user->name); ?>
+          <span class="caret"></span>
+        </a>
+        <?php print $user_links; ?>
+      </div>
+    <?php endif; ?>
   </header>
 
   <?php if ( $breadcrumb ): ?>
