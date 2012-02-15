@@ -53,6 +53,13 @@
         <?php print $user_links; ?>
       </div>
     <?php endif; ?>
+    <?php if ( !$logged_in ): ?>
+      <div class="btn-group user-links">
+        <a class="btn" href="<?php print url('user/register'); ?>">
+          <?php print t('Sign in'); ?>
+        </a>
+      </div>
+    <?php endif; ?>
   </header>
 
   <?php if ( $breadcrumb ): ?>
