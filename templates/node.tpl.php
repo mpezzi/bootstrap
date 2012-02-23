@@ -13,6 +13,13 @@
   <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print render($content); ?>
+    <?php
+      hide($content['comments']);
+      hide($content['links']);
+      print render($content);
+    ?>
   </div>
+
+  <?php print render($content['links']); ?>
+  <?php print render($content['comments']); ?>
 </div>
