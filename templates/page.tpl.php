@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar" style="display: none;">
   <div class="navbar-inner">
     <div class="container">
       <?php if ( $nav_links ): ?>
@@ -20,7 +20,7 @@
         <?php if ( $logged_in && $user_links ): ?>
           <ul class="nav pull-right">
             <li class="dropdown">
-              <a href="#" class="drowdown-toggle" data-toggle="dropdown"><?php print check_plain($user->name); ?></a>
+              <a href="#" class="drowdown-toggle" data-toggle="dropdown"><?php print $user_links_button; ?></a>
               <?php print $user_links; ?>
             </li>
           </ul>
@@ -47,7 +47,7 @@
     <?php if ( $logged_in && $user_links ): ?>
       <div class="btn-group user-links">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-          <?php print check_plain($user->name); ?>
+          <?php print $user_links_button; ?>
           <span class="caret"></span>
         </a>
         <?php print $user_links; ?>
@@ -90,6 +90,8 @@
       <?php print render($page['sidebar_second']); ?>
     <?php endif; ?>
   </div>
+
+  <?php print render($page['content_bottom']); ?>
 
 </div>
 

@@ -19,6 +19,8 @@ require dirname(__FILE__) . '/includes/theme.inc';
  * Override or insert variables into page.tpl.php
  */
 function bootstrap_preprocess_page(&$vars) {
+  global $user;
+
   $vars['nav_links'] = theme('links', array(
     'links' => $vars['main_menu'],
     'attributes' => array('class' => array('nav')),
@@ -34,4 +36,6 @@ function bootstrap_preprocess_page(&$vars) {
     'links' => $vars['secondary_menu'],
     'attributes' => array('class' => array('dropdown-menu')),
   ));
+
+  $vars['user_links_button'] = isset($user->name) ? check_plain($user->name) : '';
 }
