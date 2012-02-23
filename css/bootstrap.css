@@ -107,8 +107,8 @@ body.toolbar-drawer .navbar-fixed-top {
 
 .jumbotron .user-links {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 9px;
+  right: 9px;
 }
 
 .jumbotron .user-links .dropdown-menu {
