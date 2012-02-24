@@ -96,5 +96,23 @@
 </div>
 
 <footer class="container">
-  <?php print render($page['footer']); ?>
+  <div class="row">
+    <?php if ( $page['footer_first']): ?>
+      <div class="span3">
+        <?php print render($page['footer_first']); ?>
+      </div>
+    <?php endif; ?>
+    <?php if ( $page['footer_second']): ?>
+      <div class="span9">
+        <?php print render($page['footer_second']); ?>
+      </div>
+    <?php endif; ?>
+  </div>
+  <div class="row">
+    <?php if ( $page['footer_third']): ?>
+      <div class="span12">
+        <?php print render($page['footer_third']); ?>
+      </div>
+    <?php endif; ?>
+  </div>
 </footer>
