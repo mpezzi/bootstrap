@@ -37,5 +37,7 @@ function bootstrap_preprocess_page(&$vars) {
     'attributes' => array('class' => array('dropdown-menu')),
   ));
 
-  $vars['user_links_button'] = isset($user->name) ? check_plain($user->name) : '';
+  $vars['user_links_anonymous_text'] = t('Sign in');
+  $vars['user_links_anonymous_link'] = 'user/login';
+  $vars['user_links_authenticated_text'] = isset($user->name) ? check_plain($user->name) : '';
 }

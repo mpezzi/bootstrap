@@ -47,7 +47,7 @@
     <?php if ( $logged_in && $user_links ): ?>
       <div class="btn-group user-links">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-          <?php print $user_links_button; ?>
+          <?php print $user_links_authenticated_text; ?>
           <span class="caret"></span>
         </a>
         <?php print $user_links; ?>
@@ -55,8 +55,8 @@
     <?php endif; ?>
     <?php if ( !$logged_in ): ?>
       <div class="btn-group user-links">
-        <a class="btn" href="<?php print url('user/register'); ?>">
-          <?php print t('Sign in'); ?>
+        <a class="btn" href="<?php print url($user_links_anonymous_link); ?>">
+          <?php print $user_links_anonymous_text; ?>
         </a>
       </div>
     <?php endif; ?>
@@ -72,7 +72,14 @@
 
   <?php if ( $title ): ?>
     <div class="page-header">
+      <?php print render($title_prefix); ?>
       <h1><?php print $title; ?></h1>
+      <?php print render($title_suffix); ?>
+      <?php if ( $action_links ): ?>
+        <ul class="action-links">
+          <?php print render($action_links); ?>
+        </ul>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
 
