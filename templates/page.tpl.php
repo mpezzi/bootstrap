@@ -20,7 +20,7 @@
         <?php if ( $logged_in && $user_links ): ?>
           <ul class="nav pull-right">
             <li class="dropdown">
-              <a href="#" class="drowdown-toggle" data-toggle="dropdown"><?php print $user_links_button; ?></a>
+              <a href="#" class="drowdown-toggle" data-toggle="dropdown"><?php print $user_links_authenticated_text; ?></a>
               <?php print $user_links; ?>
             </li>
           </ul>
