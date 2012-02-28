@@ -148,7 +148,7 @@ ul.links.inline {
 ul.inline li {
   display: inline;
   list-style-type: none;
-  padding: 0 0.5em;
+  padding: 0 0.5em 0 0;
 }
 
 /* Forms
