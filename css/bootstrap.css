@@ -238,6 +238,16 @@ td.checkbox input[type="checkbox"] {
   margin-left: 0;
 }
 
+/* Fieldsets
+------------------------------- */
+fieldset legend {
+  margin-bottom: 0;
+}
+
+fieldset .fieldset-wrapper {
+  padding-top: 27px;
+}
+
 /* Filters
 ------------------------------- */
 .tips {
