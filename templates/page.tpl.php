@@ -104,23 +104,18 @@
 </div>
 
 <footer class="container">
-  <div class="row">
-    <?php if ( $page['footer_first']): ?>
-      <div class="span3">
+  <?php if ( $page['footer_first'] || $page['footer_second'] ): ?>
+    <div class="row">
+      <?php if ( $page['footer_first']): ?>
         <?php print render($page['footer_first']); ?>
-      </div>
-    <?php endif; ?>
-    <?php if ( $page['footer_second']): ?>
-      <div class="span9">
+      <?php endif; ?>
+      <?php if ( $page['footer_second']): ?>
         <?php print render($page['footer_second']); ?>
-      </div>
-    <?php endif; ?>
-  </div>
-  <div class="row">
-    <?php if ( $page['footer_third']): ?>
-      <div class="span12">
-        <?php print render($page['footer_third']); ?>
-      </div>
-    <?php endif; ?>
-  </div>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ( $page['footer_third']): ?>
+    <?php print render($page['footer_third']); ?>
+  <?php endif; ?>
 </footer>

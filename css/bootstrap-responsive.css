@@ -1,5 +1,9 @@
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   body {
 /*    padding-top: 40px;*/
+  }
+
+  footer.container {
+    padding: 18px 20px 36px 20px;
   }
 }

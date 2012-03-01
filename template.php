@@ -69,6 +69,18 @@ function bootstrap_preprocess_page(&$vars) {
   else {
     $vars['page']['content']['#grid'] = 12;
   }
+
+  // Determine footer region grid sizes.
+  if ( $vars['page']['footer_first'] && $vars['page']['footer_second'] ) {
+    $vars['page']['footer_first']['#grid'] = 3;
+    $vars['page']['footer_second']['#grid'] = 9;
+  }
+  elseif ( $vars['page']['footer_first'] && !$vars['page']['footer_second'] ) {
+    $vars['page']['footer_first']['#grid'] = 12;
+  }
+  elseif ( !$vars['page']['footer_first'] && $vars['page']['footer_second'] ) {
+    $vars['page']['footer_second']['#grid'] = 12;
+  }
 }
 
 /**
