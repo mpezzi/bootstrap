@@ -11,16 +11,11 @@
   <![endif]-->
 
   <?php print $styles; ?>
+  <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-
-  <!-- Include jQuery 1.7.1 with noConflict() -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript">var $jq171 = jQuery.noConflict();</script>
-  <?php print $scripts; ?>
-
 </body>
 </html>

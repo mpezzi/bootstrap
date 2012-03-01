@@ -8,12 +8,15 @@ Required libraries:
 
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap)
 
+Required modules:
+
+* [jQuery Update 7.x-2.x-dev](http://drupal.org/project/jquery_update)
+
 Notes:
 
 * Extract the contents of http://twitter.github.com/bootstrap/assets/bootstrap.zip into this theme.
-* Bootstrap.js requires jQuery 1.7, it is loaded in noConflict mode in html.tpl.php and you will need to prepend "window.jQuery = $jq171;" to the bootstrap/js/bootstrap.js file you downloaded.
+* Bootstrap.js requires jQuery 1.7, download and enable the dev version of jQuery Update and set the jQuery version to 1.7 on the Performance page (admin/config/development/performance).
 
 Todos:
 
 * Sidebar Left / Sidebar Right / Content Regions layout aren't setup yet.
-* Find a better approach for integrating jQuery 1.7.1
