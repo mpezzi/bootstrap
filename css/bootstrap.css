@@ -248,6 +248,16 @@ fieldset .fieldset-wrapper {
   padding-top: 27px;
 }
 
+/* Autocomplete
+------------------------------- */
+html.js input.form-autocomplete {
+  background-position: 100% 6px;
+}
+
+html.js input.throbbing {
+  background-position: 100% -14px;
+}
+
 /* Filters
 ------------------------------- */
 .tips {
