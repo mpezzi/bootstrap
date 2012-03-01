@@ -1,4 +1,5 @@
-<div class="navbar" style="display: none;">
+<?php if ( theme_get_setting('bootstrap_nav') ): ?>
+<div class="navbar">
   <div class="navbar-inner">
     <div class="container">
       <?php if ( $nav_links ): ?>
@@ -29,6 +30,7 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
 
 <div class="container">
 

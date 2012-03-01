@@ -10,6 +10,29 @@
  * Implements hook_form_system_theme_settings_alter().
  */
 function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
+  $form['nav'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Navigation'),
+  );
+
+  $form['nav']['bootstrap_nav'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Nav Bar'),
+    '#default_value' => theme_get_setting('bootstrap_nav'),
+  );
+
+  $form['nav']['bootstrap_nav_sub'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Sub Nav Bar'),
+    '#default_value' => theme_get_setting('bootstrap_nav_sub'),
+  );
+
+  $form['nav']['bootstrap_nav_user'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('User Nav'),
+    '#default_value' => theme_get_setting('bootstrap_nav_user'),
+  );
+
   $form['breadcrumb'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumb'),
