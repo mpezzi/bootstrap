@@ -26,8 +26,8 @@
  * @see template_process()
  */
 ?>
-<?php if ($content): ?>
-  <div class="<?php print $classes; ?> span12">
+<?php if ( $content ): ?>
+  <div class="<?php print $classes; ?>">
     <?php print $content; ?>
   </div>
 <?php endif; ?>
