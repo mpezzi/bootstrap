@@ -210,6 +210,10 @@ select,
   float: none;
 }
 
+.form-horizontal .controls label.option {
+  text-align: left;
+}
+
 /* Fix Horizontal Forms on Password Confirm Field
 ------------------------------- */
 .form-horizontal .form-type-password-confirm > div.controls {
