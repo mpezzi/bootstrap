@@ -248,6 +248,10 @@ fieldset .fieldset-wrapper {
   padding-top: 27px;
 }
 
+fieldset .fieldset-description {
+  margin-bottom: 18px;
+}
+
 /* Autocomplete
 ------------------------------- */
 html.js input.form-autocomplete {
