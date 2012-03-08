@@ -212,6 +212,7 @@ select,
 
 .form-horizontal .controls label.option {
   text-align: left;
+  width: auto;
 }
 
 /* Fix Horizontal Forms on Password Confirm Field
