@@ -350,3 +350,22 @@ footer p {
 footer .block {
   margin-bottom: 18px;
 }
+
+/* Views
+------------------------------- */
+.views-exposed-widgets {
+  margin: 18px 0;
+}
+
+.views-exposed-widget {
+  float: left;
+  margin-right: 9px;
+}
+
+.views-exposed-widget .help-block {
+  font-size: 11px;
+}
+
+.views-submit-button {
+  margin-top: 23px;
+}
