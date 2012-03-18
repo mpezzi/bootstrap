@@ -369,3 +369,16 @@ footer .block {
 .views-submit-button {
   margin-top: 23px;
 }
+
+/* Maintenance Page
+------------------------------- */
+.maintenance-page #page {
+  margin: 18px 0;
+}
+
+.maintenance-page h1 {
+  margin-bottom: 18px;
+  font-size: 40px;
+  line-height: 1;
+}
+
