@@ -87,6 +87,8 @@
 
   <?php print $messages; ?>
 
+  <?php print render($page['content_top']); ?>
+
   <div class="row">
     <?php if ( $page['sidebar_first'] ): ?>
       <?php print render($page['sidebar_first']); ?>
