@@ -73,7 +73,7 @@
   <?php endif; ?>
 
   <?php if ( $title ): ?>
-    <div class="page-header">
+    <div id="page-title" class="page-header">
       <?php print render($title_prefix); ?>
       <h1><?php print $title; ?></h1>
       <?php print render($title_suffix); ?>

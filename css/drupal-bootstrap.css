@@ -116,6 +116,29 @@ body.toolbar-drawer .navbar-fixed-top {
   right: 0;
 }
 
+/* Page Title
+------------------------------- */
+#page-title {
+  position: relative;
+}
+
+#page-title ul.action-links {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#page-title ul.action-links li {
+  display: inline;
+}
+
+#page-title ul.action-links li a {
+  margin: 0 0 0 8px;
+  padding: 0 0 0 12px;
+}
+
 /* Tabs
 ------------------------------- */
 div.tabs {
