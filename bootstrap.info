@@ -5,10 +5,8 @@ screenshot = screenshot.png
 core = 7.x
 engine = phptemplate
 
-stylesheets[all][] = bootstrap/css/bootstrap.min.css
-stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
-stylesheets[all][] = css/bootstrap.css
-stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/drupal-bootstrap.css
+stylesheets[all][] = css/drupal-bootstrap-responsive.css
 
 scripts[] = bootstrap/js/bootstrap.min.js
 scripts[] = js/bootstrap.js
