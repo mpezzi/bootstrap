@@ -6,6 +6,7 @@ core = 7.x
 base theme = bootstrap
 
 stylesheets[all][] = css/theme.css
+stylesheets[all][] = css/theme-responsive.css
 
 scripts[] = js/script.js
 
@@ -26,7 +27,12 @@ regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
 settings[bootstrap_nav] = 0
-settings[bootstrap_nav_sub] = 1
-settings[bootstrap_nav_user] = 1
-settings[bootstrap_breadcrumb] = yes
+settings[bootstrap_nav_sub] = 0
+settings[bootstrap_nav_user] = 0
+
+settings[bootstrap_breadcrumb] = no
 settings[bootstrap_breadcrumb_divider] = '/'
+
+settings[bootstrap_path_css] = 'bootstrap/css/bootstrap.min.css'
+settings[bootstrap_path_css_responsive] = 'bootstrap/css/bootstrap-responsive.min.css'
+settings[bootstrap_path_js] = 'bootstrap/js/bootstrap.min.js'

@@ -15,6 +15,19 @@ require dirname(__FILE__) . '/includes/tab.inc';
 require dirname(__FILE__) . '/includes/table.inc';
 require dirname(__FILE__) . '/includes/theme.inc';
 
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function bootstrap_preprocess_html(&$vars) {
+  $theme_path = drupal_get_path('theme', $GLOBALS['theme_key']) . '/';
+
+  // Include Twitter Bootstrap library files, these should be placed inside your sub theme.
+  drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css'), array('group' => CSS_SYSTEM));
+  drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css_responsive'), array('group' => CSS_SYSTEM));
+  drupal_add_js($theme_path . theme_get_setting('bootstrap_path_js'), array('group' => JS_LIBRARY));
+}
+
 /**
  * Override or insert variables into page.tpl.php
  */
