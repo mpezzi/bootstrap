@@ -13,7 +13,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $classes; ?>" <?php print $attributes; ?>>
+<body id="top" class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <div id="page">
     <?php print $page_top; ?>
     <?php print $page; ?>
