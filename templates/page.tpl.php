@@ -68,7 +68,7 @@
     <?php print $breadcrumb; ?>
   <?php endif; ?>
 
-  <?php if ( $tabs ): ?>
+  <?php if ( !empty($tabs['#primary']) ): ?>
     <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
 
