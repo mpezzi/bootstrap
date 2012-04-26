@@ -276,6 +276,11 @@ fieldset .fieldset-description {
   margin-bottom: 18px;
 }
 
+html.js fieldset.collapsed {
+  margin-bottom: 18px;
+  height: auto;
+}
+
 /* Autocomplete
 ------------------------------- */
 html.js input.form-autocomplete {
