@@ -410,3 +410,26 @@ footer .block {
   line-height: 1;
 }
 
+/* Block: Switch User (Modal)
+------------------------------- */
+#block-devel-switch-user ul {
+  margin: 0 0 18px 0;
+  padding: 0;
+}
+
+#block-devel-switch-user button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+#block-devel-switch-user .modal-body {
+  max-height: 600px;
+}
+
+#block-devel-switch-user .well,
+#block-devel-switch-user .well form {
+  margin: 0;
+}

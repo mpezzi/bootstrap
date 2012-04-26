@@ -17,6 +17,17 @@ require dirname(__FILE__) . '/includes/theme.inc';
 
 
 /**
+ * Implements hook_page_alter().
+ */
+function bootstrap_page_alter(&$page) {
+  if ( isset($page['footer_third']['devel_switch_user']) ) {
+    $page['footer_third']['devel_switch_user']['devel_links']['#attributes']['class'] = array('nav', 'nav-tabs', 'nav-stacked');
+    $page['footer_third']['devel_switch_user']['devel_form']['#prefix'] = '<div class="well">';
+    $page['footer_third']['devel_switch_user']['devel_form']['#suffix'] = '</div>';
+  }
+}
+
+/**
  * Implements hook_preprocess_html().
  */
 function bootstrap_preprocess_html(&$vars) {
