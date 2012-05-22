@@ -26,7 +26,8 @@ function bootstrap_table(&$variables) {
     $attributes['class'][] = 'sticky-enabled';
   }
 
-  $attributes['class'][] = 'table table-striped';
+  $attributes['class'][] = 'table';
+  $attributes['class'][] = 'table-striped';
 
   $output = '<table' . drupal_attributes($attributes) . ">\n";
 
