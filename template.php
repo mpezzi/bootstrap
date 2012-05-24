@@ -35,7 +35,12 @@ function bootstrap_preprocess_html(&$vars) {
 
   // Include Twitter Bootstrap library files, these should be placed inside your sub theme.
   drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css'), array('group' => CSS_SYSTEM));
-  drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css_responsive'), array('group' => CSS_SYSTEM));
+
+  // Include responsive styles.
+  if ( theme_get_setting('bootstrap_responsive') ) {
+    drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css_responsive'), array('group' => CSS_SYSTEM));
+  }
+
   drupal_add_js($theme_path . theme_get_setting('bootstrap_path_js'), array('group' => JS_LIBRARY));
 }
 

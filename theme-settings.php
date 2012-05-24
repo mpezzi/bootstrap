@@ -10,6 +10,12 @@
  * Implements hook_form_system_theme_settings_alter().
  */
 function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
+  $form['bootstrap_responsive'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable responsive grid.'),
+    '#default_value' => theme_get_setting('bootstrap_responsive'),
+  );
+
   $form['path'] = array(
     '#type' => 'fieldset',
     '#title' => t('Paths'),
