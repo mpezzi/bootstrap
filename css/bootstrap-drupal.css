@@ -364,18 +364,18 @@ html.js input.throbbing {
 
 /* Footer
 ------------------------------- */
-footer {
+#footer {
   margin-top: 45px;
   padding: 18px 0 36px 0;
   border-top: 1px solid #e5e5e5;
 }
 
-footer p {
+#footer p {
   margin-bottom: 0;
   color: #555;
 }
 
-footer .block {
+#footer .block {
   margin-bottom: 18px;
 }
 

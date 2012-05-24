@@ -34,7 +34,7 @@
 
 <div class="container">
 
-  <header class="jumbotron">
+  <header id="header" class="jumbotron">
     <?php if ( $site_name ): ?>
       <h1><a href="<?php print $front_page; ?>"><?php print $site_name; ?></a></h1>
     <?php endif; ?>
@@ -105,7 +105,7 @@
 
 </div>
 
-<footer class="container">
+<footer id="footer" class="container">
   <?php if ( $page['footer_first'] || $page['footer_second'] ): ?>
     <div class="row">
       <?php if ( $page['footer_first']): ?>
