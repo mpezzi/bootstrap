@@ -16,6 +16,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('bootstrap_responsive'),
   );
 
+  // Bootstrap Path settings.
   $form['path'] = array(
     '#type' => 'fieldset',
     '#title' => t('Paths'),
@@ -36,6 +37,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('bootstrap_path_js'),
   );
 
+  // Navigation settings.
   $form['nav'] = array(
     '#type' => 'fieldset',
     '#title' => t('Navigation'),
@@ -56,6 +58,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('bootstrap_nav_user'),
   );
 
+  // Breadcrumb settings.
   $form['breadcrumb'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumb'),
