@@ -46,9 +46,7 @@ function bootstrap_form(&$variables) {
     $element['#attributes']['accept-charset'] = "UTF-8";
   }
 
-  // @Bootstrap: Switch forms to horizontal layout.
-  //$element['#horizontal'] = TRUE;
-  // Look for #horizontal property on form element.
+  // @Bootstrap: Switch forms to horizontal layout. Look for #horizontal property on form element.
   if ( isset($element['#horizontal']) && $element['#horizontal'] ) {
     $element['#attributes']['class'][] = 'form-horizontal';
   }
