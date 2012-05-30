@@ -10,12 +10,6 @@
  * Implements hook_form_system_theme_settings_alter().
  */
 function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
-  $form['bootstrap_responsive'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable responsive grid.'),
-    '#default_value' => theme_get_setting('bootstrap_responsive'),
-  );
-
   // Bootstrap Path settings.
   $form['path'] = array(
     '#type' => 'fieldset',
@@ -35,6 +29,33 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#type' => 'textfield',
     '#title' => t('JS'),
     '#default_value' => theme_get_setting('bootstrap_path_js'),
+  );
+
+  // Bootstrap Scaffolding settings.
+  $form['scaffolding'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Scaffolding'),
+  );
+  $form['scaffolding']['bootstrap_responsive'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable responsive grid'),
+    '#default_value' => theme_get_setting('bootstrap_responsive'),
+  );
+
+  // Bootstrap Navigation settings.
+  $form['navbar'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Navbar'),
+  );
+  $form['navbar']['bootstrap_navbar'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable navbar'),
+    '#default_value' => theme_get_setting('bootstrap_navbar'),
+  );
+  $form['navbar']['bootstrap_navbar_fixed'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable fixed navbar'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_fixed'),
   );
 
   // Navigation settings.

@@ -1,4 +1,4 @@
-/* Nav Bar
+/* Navbar
 ------------------------------- */
 body.toolbar .navbar-fixed-top {
   top: 30px;
@@ -6,6 +6,10 @@ body.toolbar .navbar-fixed-top {
 
 body.toolbar-drawer .navbar-fixed-top {
   top: 65px;
+}
+
+body.with-navbar #page {
+  padding-top: 40px;
 }
 
 /* Sub Nav Bar
