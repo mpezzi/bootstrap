@@ -222,13 +222,6 @@ legend a {
   color: #333333;
 }
 
-input,
-textarea,
-select,
-.uneditable-input {
-  margin-bottom: 0;
-}
-
 .password-strength {
   margin-top: 0;
 }
