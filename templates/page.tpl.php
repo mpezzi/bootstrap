@@ -102,21 +102,29 @@
   <header id="header" class="jumbotron">
 
     <?php if ( $logo ): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo">
+      <a id="site-logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home">
         <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
       </a>
     <?php endif; ?>
+
     <?php if ( $site_name ): ?>
-      <h1><a href="<?php print $front_page; ?>"><?php print $site_name; ?></a></h1>
+      <h1 id="site-name">
+        <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+      </h1>
     <?php endif; ?>
+
     <?php if ( $site_slogan ): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
+      <p id="site-slogan" class="lead">
+        <?php print $site_slogan; ?>
+      </p>
     <?php endif; ?>
+
     <?php if ( $subnav_links ): ?>
       <div class="subnav">
         <?php print $subnav_links; ?>
       </div>
     <?php endif; ?>
+
     <?php if ( $logged_in && $user_links ): ?>
       <div class="btn-group user-links">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -126,6 +134,7 @@
         <?php print $user_links; ?>
       </div>
     <?php endif; ?>
+
     <?php if ( !$logged_in ): ?>
       <div class="btn-group user-links">
         <a class="btn" href="<?php print url($user_links_anonymous_link); ?>">
@@ -133,6 +142,7 @@
         </a>
       </div>
     <?php endif; ?>
+
   </header>
 
   <?php if ( $breadcrumb ): ?>
