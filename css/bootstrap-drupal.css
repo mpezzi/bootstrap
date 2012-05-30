@@ -1,3 +1,11 @@
+/* Header
+------------------------------- */
+#logo {
+  display: block;
+  float: left;
+  margin-right: 18px;
+}
+
 /* Navbar
 ------------------------------- */
 body.toolbar .navbar-fixed-top {

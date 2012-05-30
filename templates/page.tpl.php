@@ -100,6 +100,12 @@
 <div class="container">
 
   <header id="header" class="jumbotron">
+
+    <?php if ( $logo ): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo">
+        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
+      </a>
+    <?php endif; ?>
     <?php if ( $site_name ): ?>
       <h1><a href="<?php print $front_page; ?>"><?php print $site_name; ?></a></h1>
     <?php endif; ?>
