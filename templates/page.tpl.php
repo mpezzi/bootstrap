@@ -56,10 +56,11 @@
  *   comment/reply/12345).
  *
  * Bootstrap:
- * - $navbar: TRUE if the navbar setting is enabled.
+ * - $navbar: TRUE if the navbar theme setting is enabled.
  * - $navbar_fixed: TRUE if the navbar fixed setting is enabled.
  * - $navbar_classes: A string of navbar classes.
  * - $navbar_classes_array (array): An array containing navbar classes.
+ * - $subnav: TRUE if the subnav theme setting is enabled.
  *
  * Regions:
  * - $page['help']: Dynamic help text, mostly for admin pages.
