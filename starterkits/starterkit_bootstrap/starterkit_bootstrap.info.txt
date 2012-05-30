@@ -31,6 +31,8 @@ settings[bootstrap_responsive] = 1
 settings[bootstrap_navbar] = 1
 settings[bootstrap_navbar_fixed] = 1
 
+settings[bootstrap_subnav] = 1
+
 settings[bootstrap_nav] = 0
 settings[bootstrap_nav_sub] = 0
 settings[bootstrap_nav_user] = 0

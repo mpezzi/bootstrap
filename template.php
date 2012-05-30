@@ -55,7 +55,7 @@ function bootstrap_preprocess_html(&$vars) {
 function bootstrap_preprocess_page(&$vars) {
   global $user;
 
-  // Navbar menu settings.
+  // Navbar settings.
   $vars['navbar'] = theme_get_setting('bootstrap_navbar');
   $vars['navbar_fixed'] = theme_get_setting('bootstrap_navbar_fixed');
   $vars['navbar_classes_array'] = array('navbar');
@@ -64,6 +64,9 @@ function bootstrap_preprocess_page(&$vars) {
   if ( $vars['navbar_fixed'] ) {
     $vars['navbar_classes_array'][] = 'navbar-fixed-top';
   }
+
+  // Subnav settings.
+  $vars['subnav'] = theme_get_setting('bootstrap_subnav');
 
   $vars['nav_links'] = '';
   $vars['subnav_links'] = '';

@@ -42,7 +42,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('bootstrap_responsive'),
   );
 
-  // Bootstrap Navigation settings.
+  // Bootstrap Navbar settings.
   $form['navbar'] = array(
     '#type' => 'fieldset',
     '#title' => t('Navbar'),
@@ -56,6 +56,17 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Enable fixed navbar'),
     '#default_value' => theme_get_setting('bootstrap_navbar_fixed'),
+  );
+
+  // Bootstrap Subnav settings.
+  $form['subnav'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Subnav'),
+  );
+  $form['subnav']['bootstrap_subnav'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable subnav'),
+    '#default_value' => theme_get_setting('bootstrap_subnav'),
   );
 
   // Navigation settings.

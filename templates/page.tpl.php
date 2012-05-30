@@ -119,15 +119,12 @@
       </h1>
     <?php endif; ?>
 
-    <?php if ( $site_slogan ): ?>
-      <p id="site-slogan" class="lead">
-        <?php print $site_slogan; ?>
-      </p>
-    <?php endif; ?>
-
-    <?php if ( $subnav_links ): ?>
+    <?php if ( $subnav ): ?>
       <div class="subnav">
-        <?php print $subnav_links; ?>
+        <?php print theme('links', array(
+          'links' => $main_menu,
+          'attributes' => array('class' => array('nav', 'nav-pills')),
+        )); ?>
       </div>
     <?php endif; ?>
 
