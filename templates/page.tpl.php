@@ -85,9 +85,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="<?php print $front_page; ?>">
-        <?php print $site_name; ?>
-      </a>
+      <?php if ( $site_name ): ?>
+        <a class="brand" href="<?php print $front_page; ?>">
+          <?php print $site_name; ?>
+        </a>
+      <?php endif; ?>
       <div class="nav-collapse">
         <?php print theme('links', array(
           'links' => $main_menu,
