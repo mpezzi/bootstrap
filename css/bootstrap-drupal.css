@@ -226,6 +226,24 @@ legend a {
   margin-top: 0;
 }
 
+/* Forms (Inline)
+------------------------------- */
+.container-inline {
+  margin-bottom: 9px;
+}
+
+.container-inline .controls,
+.container-inline .control-group,
+.container-inline .form-actions {
+  display: inline;
+}
+
+.container-inline .form-actions {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+
 /* Forms (Vertical)
 ------------------------------- */
 .form-type-radios .control-group,

@@ -13,8 +13,16 @@ require dirname(__FILE__) . '/includes/theme/list.inc';
 require dirname(__FILE__) . '/includes/theme/pager.inc';
 require dirname(__FILE__) . '/includes/theme/tab.inc';
 require dirname(__FILE__) . '/includes/theme/table.inc';
+require dirname(__FILE__) . '/includes/theme/search.inc';
 require dirname(__FILE__) . '/includes/theme/theme.inc';
 
+
+/**
+ * Implements hook_form_alter().
+ */
+function bootstrap_form_alter(&$form, &$form_state, $form_id) {
+  //dpm($form_id);
+}
 
 /**
  * Implements hook_page_alter().
