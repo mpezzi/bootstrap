@@ -138,7 +138,7 @@
       </div>
     <?php endif; ?>
 
-  </header>
+  </header> <!-- / #header -->
 
   <?php if ( $breadcrumb ): ?>
     <?php print $breadcrumb; ?>
@@ -148,38 +148,45 @@
     <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
 
-  <?php if ( $title ): ?>
-    <div id="page-title" class="page-header">
-      <?php print render($title_prefix); ?>
-      <h1><?php print $title; ?></h1>
-      <?php print render($title_suffix); ?>
-      <?php if ( $action_links ): ?>
-        <ul class="action-links">
-          <?php print render($action_links); ?>
-        </ul>
+  <div id="content">
+
+    <?php print render($title_prefix); ?>
+    <?php if ( $title ): ?>
+      <div id="page-title" class="page-header">
+        <h1><?php print $title; ?></h1>
+      </div> <!-- / #page-title -->
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+
+    <?php if ( $action_links ): ?>
+      <ul class="action-links">
+        <?php print render($action_links); ?>
+      </ul>
+    <?php endif; ?>
+
+    <?php print $messages; ?>
+
+    <?php print render($page['content_top']); ?>
+    <?php print render($page['help']); ?>
+
+    <div id="main" class="row">
+      <?php if ( $page['sidebar_first'] ): ?>
+        <?php print render($page['sidebar_first']); ?>
       <?php endif; ?>
-    </div>
-  <?php endif; ?>
 
-  <?php print $messages; ?>
+      <?php print render($page['content']); ?>
 
-  <?php print render($page['content_top']); ?>
+      <?php if ( $page['sidebar_second'] ): ?>
+        <?php print render($page['sidebar_second']); ?>
+      <?php endif; ?>
+    </div> <!-- / #main -->
 
-  <div class="row">
-    <?php if ( $page['sidebar_first'] ): ?>
-      <?php print render($page['sidebar_first']); ?>
-    <?php endif; ?>
+    <?php print render($page['content_bottom']); ?>
+    <?php print $feed_icons; ?>
 
-    <?php print render($page['content']); ?>
+  </div> <!-- / #content -->
 
-    <?php if ( $page['sidebar_second'] ): ?>
-      <?php print render($page['sidebar_second']); ?>
-    <?php endif; ?>
-  </div>
-
-  <?php print render($page['content_bottom']); ?>
-
-</div>
+</div> <!-- / #container -->
 
 <footer id="footer" class="container">
   <?php if ( $page['footer_first'] || $page['footer_second'] ): ?>
@@ -196,4 +203,4 @@
   <?php if ( $page['footer_third']): ?>
     <?php print render($page['footer_third']); ?>
   <?php endif; ?>
-</footer>
+</footer> <!-- / #footer -->
