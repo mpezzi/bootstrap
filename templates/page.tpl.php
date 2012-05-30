@@ -105,7 +105,7 @@
 
 <div class="container">
 
-  <header id="header" class="jumbotron">
+  <header id="header" class="jumbotron clearfix" role="banner">
 
     <?php if ( $logo ): ?>
       <a id="site-logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home">
@@ -113,10 +113,20 @@
       </a>
     <?php endif; ?>
 
-    <?php if ( $site_name ): ?>
-      <h1 id="site-name">
-        <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
-      </h1>
+    <?php if ( $site_name || $site_slogan ): ?>
+      <hgroup id="name-and-slogan">
+        <?php if ( $site_name ): ?>
+          <h1 id="site-name">
+            <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+          </h1>
+        <?php endif; ?>
+
+        <?php if ( $site_slogan ): ?>
+          <p id="site-slogan" class="lead">
+            <?php print $site_slogan; ?>
+          </p>
+        <?php endif; ?>
+      </hgroup>
     <?php endif; ?>
 
     <?php if ( $subnav ): ?>

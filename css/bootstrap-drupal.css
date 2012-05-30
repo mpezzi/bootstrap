@@ -1,9 +1,26 @@
 /* Header
 ------------------------------- */
+#header {
+
+}
+
+#header .subnav {
+  clear: both;
+}
+
+#site-name {
+  font-size: 54px;
+}
+
+#site-name a {
+  color: #333;
+}
+
 #site-logo {
   display: block;
   float: left;
   margin-right: 18px;
+  margin-bottom: 18px;
 }
 
 /* Navbar
