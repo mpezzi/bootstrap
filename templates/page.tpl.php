@@ -77,7 +77,7 @@
  */
 ?>
 <?php if ( $navbar ): ?>
-<div class="<?php print $navbar_classes; ?>">
+<div class="<?php print $navbar_classes; ?>" role="navigation">
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -130,7 +130,7 @@
     <?php endif; ?>
 
     <?php if ( $subnav ): ?>
-      <div class="subnav">
+      <div class="subnav" role="navigation">
         <?php print theme('links', array(
           'links' => $main_menu,
           'attributes' => array('class' => array('nav', 'nav-pills')),
