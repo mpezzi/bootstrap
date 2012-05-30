@@ -25,6 +25,11 @@
 
 /* Navbar
 ------------------------------- */
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  z-index: 499;
+}
+
 body.toolbar .navbar-fixed-top {
   top: 30px;
 }
