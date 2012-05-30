@@ -8,12 +8,12 @@
 /**
  * Include theme component files.
  */
-require dirname(__FILE__) . '/includes/form.inc';
-require dirname(__FILE__) . '/includes/list.inc';
-require dirname(__FILE__) . '/includes/pager.inc';
-require dirname(__FILE__) . '/includes/tab.inc';
-require dirname(__FILE__) . '/includes/table.inc';
-require dirname(__FILE__) . '/includes/theme.inc';
+require dirname(__FILE__) . '/includes/theme/form.inc';
+require dirname(__FILE__) . '/includes/theme/list.inc';
+require dirname(__FILE__) . '/includes/theme/pager.inc';
+require dirname(__FILE__) . '/includes/theme/tab.inc';
+require dirname(__FILE__) . '/includes/theme/table.inc';
+require dirname(__FILE__) . '/includes/theme/theme.inc';
 
 
 /**
