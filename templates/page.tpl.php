@@ -138,6 +138,9 @@
       </div>
     <?php endif; ?>
 
+    <?php print render($page['header_first']); ?>
+    <?php print render($page['header_second']); ?>
+
   </header> <!-- / #header -->
 
   <?php if ( $breadcrumb ): ?>
