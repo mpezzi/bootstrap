@@ -55,49 +55,16 @@ function bootstrap_preprocess_html(&$vars) {
 function bootstrap_preprocess_page(&$vars) {
   global $user;
 
-  // Navbar settings.
-  $vars['navbar'] = theme_get_setting('bootstrap_navbar');
-  $vars['navbar_fixed'] = theme_get_setting('bootstrap_navbar_fixed');
-  $vars['navbar_classes_array'] = array('navbar');
+  // Bootstrap Component Settings.
+  $vars['navbar']                 = theme_get_setting('bootstrap_navbar');
+  $vars['navbar_fixed']           = theme_get_setting('bootstrap_navbar_fixed');
+  $vars['navbar_classes_array']   = array('navbar');
+  $vars['subnav']                 = theme_get_setting('bootstrap_subnav');
 
-  // Navbar fixed settings.
+  // Added 'navbar-fixed' class if setting is enabled.
   if ( $vars['navbar_fixed'] ) {
     $vars['navbar_classes_array'][] = 'navbar-fixed-top';
   }
-
-  // Subnav settings.
-  $vars['subnav'] = theme_get_setting('bootstrap_subnav');
-
-  $vars['nav_links'] = '';
-  $vars['subnav_links'] = '';
-  $vars['user_links'] = '';
-
-  // Build menu links.
-  if ( theme_get_setting('bootstrap_nav') ) {
-    $vars['nav_links'] = theme('links', array(
-      'links' => $vars['main_menu'],
-      'attributes' => array('class' => array('nav')),
-    ));
-  }
-
-  if ( theme_get_setting('bootstrap_nav_sub') ) {
-    $vars['subnav_links'] = theme('links', array(
-      'links' => $vars['main_menu'],
-      'attributes' => array('class' => array('nav', 'nav-pills')),
-    ));
-  }
-
-  if ( theme_get_setting('bootstrap_nav_user') ) {
-    $vars['user_links'] = theme('links', array(
-      'links' => $vars['secondary_menu'],
-      'attributes' => array('class' => array('dropdown-menu')),
-    ));
-  }
-
-  // Build user navigation buttons.
-  $vars['user_links_anonymous_text'] = t('Sign in');
-  $vars['user_links_anonymous_link'] = 'user/login';
-  $vars['user_links_authenticated_text'] = isset($user->name) ? check_plain($user->name) : '';
 
   // Determine content and sidebar layout, and set grid sizes.
   if ( $vars['page']['sidebar_first'] && $vars['page']['sidebar_second'] ) {
@@ -134,7 +101,9 @@ function bootstrap_preprocess_page(&$vars) {
  * Implements hook_process_page().
  */
 function bootstrap_process_page(&$vars) {
-  $vars['navbar_classes'] = implode(' ', $vars['navbar_classes_array']);
+  if ( isset($vars['navbar_classes_array']) ) {
+    $vars['navbar_classes'] = implode(' ', $vars['navbar_classes_array']);
+  }
 }
 
 /**
