@@ -59,14 +59,6 @@ function bootstrap_preprocess_page(&$vars) {
   $vars['navbar'] = theme_get_setting('bootstrap_navbar');
   $vars['navbar_fixed'] = theme_get_setting('bootstrap_navbar_fixed');
   $vars['navbar_classes_array'] = array('navbar');
-  $vars['navbar_primary_links'] = theme('links', array(
-    'links' => $vars['main_menu'],
-    'attributes' => array('class' => array('nav')),
-  ));
-  $vars['navbar_secondary_links'] = theme('links', array(
-    'links' => $vars['secondary_menu'],
-    'attributes' => array('class' => array('nav', 'pull-right')),
-  ));
 
   // Navbar fixed settings.
   if ( $vars['navbar_fixed'] ) {

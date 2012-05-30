@@ -58,8 +58,6 @@
  * Bootstrap:
  * - $navbar: TRUE if the navbar setting is enabled.
  * - $navbar_fixed: TRUE if the navbar fixed setting is enabled.
- * - $navbar_primary_links: Primary navigation rendered from theme_links.
- * - $navbar_secondary_links: Secondary navigation rendered from theme_links.
  * - $navbar_classes: A string of navbar classes.
  * - $navbar_classes_array (array): An array containing navbar classes.
  *
@@ -87,10 +85,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+      <a class="brand" href="<?php print $front_page; ?>">
+        <?php print $site_name; ?>
+      </a>
       <div class="nav-collapse">
-        <?php print $navbar_primary_links; ?>
-        <?php print $navbar_secondary_links; ?>
+        <?php print theme('links', array(
+          'links' => $main_menu,
+          'attributes' => array('class' => array('nav')),
+        )); ?>
+        <?php print theme('links', array(
+          'links' => $secondary_menu,
+          'attributes' => array('class' => array('nav', 'pull-right')),
+        )); ?>
       </div>
     </div>
   </div>
