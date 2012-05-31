@@ -159,7 +159,7 @@
     <?php print render($title_prefix); ?>
     <?php if ( $title ): ?>
       <div id="page-title" class="page-header">
-        <h1><?php print $title; ?></h1>
+        <h1 id="title"><?php print $title; ?></h1>
       </div> <!-- / #page-title -->
     <?php endif; ?>
     <?php print render($title_suffix); ?>
