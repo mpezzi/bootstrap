@@ -96,8 +96,8 @@ function bootstrap_preprocess_page(&$vars) {
 
   // Determine footer region grid sizes.
   if ( $vars['page']['footer_first'] && $vars['page']['footer_second'] ) {
-    $vars['page']['footer_first']['#grid'] = 3;
-    $vars['page']['footer_second']['#grid'] = 9;
+    $vars['page']['footer_first']['#grid'] = 6;
+    $vars['page']['footer_second']['#grid'] = 6;
   }
   elseif ( $vars['page']['footer_first'] && !$vars['page']['footer_second'] ) {
     $vars['page']['footer_first']['#grid'] = 12;
