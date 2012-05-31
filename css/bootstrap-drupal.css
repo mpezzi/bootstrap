@@ -354,6 +354,10 @@ html.js input.throbbing {
   margin-bottom: 18px;
 }
 
+.node header {
+  margin-bottom: 9px;
+}
+
 /* Comments
 ------------------------------- */
 .comment {
