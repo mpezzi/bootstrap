@@ -146,6 +146,10 @@
 
   </header> <!-- / #header -->
 
+  <?php if ( $page['navigation'] ): ?>
+    <?php print render($page['navigation']); ?>
+  <?php endif; ?>
+
   <?php if ( $breadcrumb ): ?>
     <?php print $breadcrumb; ?>
   <?php endif; ?>
