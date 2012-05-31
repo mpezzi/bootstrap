@@ -12,6 +12,7 @@
 function bootstrap_form_search_block_form_alter(&$form, &$form_state) {
   // Append form-search classes.
   $form['#attributes']['class'][] = 'form-search';
-  $form['search_block_form']['#attributes']['class'][] = 'input-small';
+  $form['search_block_form']['#attributes']['class'][] = 'input-medium';
   $form['search_block_form']['#attributes']['class'][] = 'search-query';
+  $form['search_block_form']['#attributes']['placeholder'] = t('Search');
 }

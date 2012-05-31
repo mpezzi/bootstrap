@@ -208,6 +208,12 @@ ul.inline li {
   padding: 0 0.5em 0 0;
 }
 
+/* Search
+--------------------------------------------- */
+#search-block-form #edit-actions {
+  display: none;
+}
+
 /* Forms
 ------------------------------- */
 .form-required {
