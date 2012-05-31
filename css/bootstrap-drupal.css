@@ -210,7 +210,7 @@ ul.inline li {
 
 /* Search
 --------------------------------------------- */
-#search-block-form #edit-actions {
+#search-block-form .form-actions {
   display: none;
 }
 
