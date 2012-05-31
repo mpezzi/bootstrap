@@ -162,8 +162,11 @@
 
     <?php print render($title_prefix); ?>
     <?php if ( $title ): ?>
-      <div id="page-title" class="page-header">
+      <div id="page-title" class="page-header clearfix">
         <h1 id="title"><?php print $title; ?></h1>
+        <?php if ( $page['title'] ): ?>
+          <?php print render($page['title']); ?>
+        <?php endif; ?>
       </div> <!-- / #page-title -->
     <?php endif; ?>
     <?php print render($title_suffix); ?>
