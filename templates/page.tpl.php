@@ -106,7 +106,7 @@
 </div>
 <?php endif; ?>
 
-<div id="page" class="container">
+<div class="container">
 
   <header id="header" class="jumbotron clearfix" role="banner">
 
