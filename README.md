@@ -14,7 +14,7 @@ Required modules:
 
 Notes:
 
-* Extract the contents of http://twitter.github.com/bootstrap/assets/bootstrap.zip into your sub theme, or if you have drush installed you can execute the following command: **drush bootstrap-subtheme "Subtheme Name" example_bootstrap**, your sub theme will automagically be created and the Twitter Bootstrap library will be downloaded and extracted.
+* Extract the contents of http://twitter.github.com/bootstrap/assets/bootstrap.zip into your sub theme, or if you have drush installed you can execute the following command: **drush bootstrap-subtheme "Subtheme Name" example_bootstrap**, your sub theme will automagically be created and the Twitter Bootstrap library will be downloaded and extracted. You may need to clear your cache before running this command.
 * Bootstrap.js requires jQuery 1.7 +, download and enable the dev version of jQuery Update and set the version to 1.7 on the jQuery Update settings page (admin/config/development/jquery_update). Alternatively, if you find 1.7 breaks your administration pages, you can use the following code in your settings.php file to switch between jQuery versions.
 
 <pre>
