@@ -127,7 +127,7 @@ function bootstrap_form_element(&$variables) {
   }
 
   if ( !empty($element['#description']) ) {
-    $output .= '<p class="help-block">' . $element['#description'] . "</p>\n";
+    $output .= '<span class="help-block">' . $element['#description'] . "</span>\n";
   }
 
   $output .= "</div></div>\n";
