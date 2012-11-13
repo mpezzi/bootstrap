@@ -34,14 +34,18 @@ function bootstrap_preprocess_html(&$vars) {
   $theme_path = drupal_get_path('theme', $GLOBALS['theme_key']) . '/';
 
   // Include Twitter Bootstrap library files, these should be placed inside your sub theme.
-  drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css'), array('group' => CSS_SYSTEM));
+  if ( theme_get_setting('bootstrap_path_css') ) {
+    drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css'), array('group' => CSS_SYSTEM));
+  }
 
   // Include responsive styles.
-  if ( theme_get_setting('bootstrap_responsive') ) {
+  if ( theme_get_setting('bootstrap_path_css_responsive') && theme_get_setting('bootstrap_responsive') ) {
     drupal_add_css($theme_path . theme_get_setting('bootstrap_path_css_responsive'), array('group' => CSS_SYSTEM));
   }
 
-  drupal_add_js($theme_path . theme_get_setting('bootstrap_path_js'), array('group' => JS_LIBRARY));
+  if ( theme_get_setting('bootstrap_path_js') ) {
+    drupal_add_js($theme_path . theme_get_setting('bootstrap_path_js'), array('group' => JS_LIBRARY));
+  }
 
   // Navbar fixed settings.
   if ( theme_get_setting('bootstrap_navbar_fixed') ) {
