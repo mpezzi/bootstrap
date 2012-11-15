@@ -92,4 +92,16 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state) {
     '#size' => 5,
     '#maxlength' => 10,
   );
+  
+  // Bootstrap Form settings
+  $form['forms'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Forms'),
+  );
+  $form['forms']['bootstrap_horizontal_forms'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use horizontal forms'),
+      '#description' => t('Caution: This setting introduces new elements in a form\'s DOM structure. It\'s possible that some modules relying on jQuery might not like it as the hierarchy changes.'),
+      '#default_value' => theme_get_setting('bootstrap_horizontal_forms'),
+  );
 }

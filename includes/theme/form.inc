@@ -23,10 +23,10 @@ function bootstrap_button(&$vars) {
   }
 
   // @Bootstrap: Use appropriate bootstrap button types.
-  if ( strpos($element['#id'], 'submit') !== FALSE ) {
+  if ( isset($element['#id']) && strpos($element['#id'], 'submit') !== FALSE ) {
     $element['#attributes']['class'][] = 'btn-primary';
   }
-  elseif ( strpos($element['#id'], 'delete') !== FALSE ) {
+  elseif ( isset($element['#id']) && strpos($element['#id'], 'delete') !== FALSE ) {
     $element['#attributes']['class'][] = 'btn-danger';
   }
 
@@ -47,9 +47,7 @@ function bootstrap_form(&$variables) {
   }
 
   // @Bootstrap: Switch forms to horizontal layout.
-  //$element['#horizontal'] = TRUE;
-  // Look for #horizontal property on form element.
-  if ( isset($element['#horizontal']) && $element['#horizontal'] ) {
+  if ( theme_get_setting('bootstrap_horizontal_forms') ) {
     $element['#attributes']['class'][] = 'form-horizontal';
   }
 
@@ -61,6 +59,10 @@ function bootstrap_form(&$variables) {
  * Returns HTML for a form element.
  */
 function bootstrap_form_element(&$variables) {
+  // Check whether we have to introduce new divs that enable horizontal forms
+  // Icon add-ons, and validation hints.
+  $useBootstrapControlMarkup = theme_get_setting('bootstrap_horizontal_forms');
+  
   $element = &$variables['element'];
   // This is also used in the installer, pre-database setup.
   $t = get_t();
@@ -77,13 +79,7 @@ function bootstrap_form_element(&$variables) {
   }
 
   // Add element's #type and #name as class to aid with JS/CSS selectors.
-  $attributes['class'] = array('control-group');
-
-  // Add an error class to the form wrapper.
-  if ( form_get_error($element) ) {
-    $attributes['class'][] = 'error';
-  }
-
+  $attributes['class'] = array('form-item');
   if (!empty($element['#type'])) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
@@ -94,6 +90,17 @@ function bootstrap_form_element(&$variables) {
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'form-disabled';
   }
+  
+  $error = FALSE;
+  // @Bootstrap: Add an error class to the form wrapper.
+  if ( isset($element['#parents']) && $error = form_get_error($element) ) {
+    $attributes['class'][] = 'error';
+  }
+  // @Bootstrap: Add Control Group if necessary
+  if($useBootstrapControlMarkup) {
+    $attributes['class'][] = 'control-group';
+  }
+  
   $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
 
   // If #title is not set, we don't display any label or required marker.
@@ -107,12 +114,16 @@ function bootstrap_form_element(&$variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= '<div class="controls">';
+      if($useBootstrapControlMarkup) {
+        $output .= '<div class="controls">';
+      }
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
-      $output .= '<div class="controls">';
+      if($useBootstrapControlMarkup) {
+        $output .= '<div class="controls">';
+      }
       // @Bootstrap: Bootstrap markup requires the input element to be inside the label element.
       $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
@@ -121,16 +132,26 @@ function bootstrap_form_element(&$variables) {
     case 'none':
     case 'attribute':
       // Output no label and no required marker, only the children.
-      $output .= '<div class="controls">';
+      if($useBootstrapControlMarkup) {
+        $output .= '<div class="controls">';
+      }
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
   }
-
-  if ( !empty($element['#description']) ) {
-    $output .= '<p class="help-block">' . $element['#description'] . "</p>\n";
+  
+  if($useBootstrapControlMarkup) {
+    if($error) {
+      $output .= '<span class="help-inline">'.$error.'</span>';
+    }
+    $output .= '</div>';
   }
 
-  $output .= "</div></div>\n";
+  if ( !empty($element['#description']) ) {
+    $output .= '<p class="description">' . $element['#description'] . "</p>\n";
+  }
+
+  
+  $output .= "</div>\n";
 
   return $output;
 }

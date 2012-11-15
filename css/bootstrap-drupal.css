@@ -30,7 +30,8 @@
   z-index: 499;
 }
 
-body.toolbar .navbar-fixed-top {
+body.toolbar .navbar-fixed-top, 
+body.admin-menu .navbar-fixed-top {
   top: 30px;
 }
 
