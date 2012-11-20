@@ -10,17 +10,17 @@ stylesheets[all][] = css/bootstrap-drupal-responsive.css
 
 scripts[] = js/bootstrap-drupal.js
 
-regions[help] = Help
-regions[sidebar_first] = First sidebar
-regions[sidebar_second] = Second sidebar
+regions[header_first] = Header First
+regions[header_second] = Header Second
 regions[navigation] = Navigation bar
 regions[highlighted] = Highlighted
+regions[help] = Help
 regions[title] = Title
 regions[content_top] = Content Top
 regions[content] = Content
 regions[content_bottom] = Content Bottom
-regions[header_first] = Header First
-regions[header_second] = Header Second
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
 regions[footer_third] = Footer Third
