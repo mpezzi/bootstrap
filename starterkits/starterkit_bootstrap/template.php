@@ -9,7 +9,7 @@
  * Implements hook_form_alter().
  */
 /* -- Delete this line if you want to use this function
-function starterkit_bootstrap_form_horizontal(&$form, &$form_state, $form_id) {
+function starterkit_bootstrap_form_alter(&$form, &$form_state, $form_id) {
   // Form IDs to present in the horizontal layout.
   $form_ids = array(
     'user_register_form',
