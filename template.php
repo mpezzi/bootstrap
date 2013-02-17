@@ -52,7 +52,7 @@ function bootstrap_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'with-navbar';
   }
 
-  if(empty($vars['head_title']){// If front page, don't display a page title in head_title.
+  if(empty($vars['head_title'])){// If front page, don't display a page title in head_title.
     if ( drupal_is_front_page() ) {
       $vars['head_title_array'] = array('name' => check_plain(variable_get('site_name', 'Drupal')));
       if ( variable_get('site_slogan', '') ) {
